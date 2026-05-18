@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.entry {
+  position: fixed;
+  inset: 0;
+  background: #0e0e0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Syne', sans-serif;
+  overflow: hidden;
+}
+
+.entry__content {
+  position: relative;
+  text-align: center;
+}
+
+.entry__year {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.entry__name {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0 0 12px;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+
+/* exit animation — add this class to .entry to trigger */
+.entry--exiting {
+  animation: exitZoom 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dodging-image__stage {
+  position: fixed;
+  inset: 0;
+}
+
+.dodging-image__img {
+  position: absolute;
+  width: 160px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation:
+    fadeInImage 1.2s ease 2s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes exitZoom {
+  from { opacity: 1; transform: scale(1);   filter: blur(0px); }
+  to   { opacity: 0; transform: scale(6);   filter: blur(16px); }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
