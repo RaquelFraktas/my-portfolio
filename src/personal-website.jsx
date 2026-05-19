@@ -57,7 +57,7 @@ export default function PersonalSite() {
       {/* NAV */}
       <nav className="site-nav">
         <span className="site-nav__logo">
-          <span className="site-nav__logo-accent">&lt;</span>raquel<span className="site-nav__logo-accent">/&gt;</span>
+          raquel fraktas
         </span>
         <div className="site-nav__links">
           {navItems.map((s) => (

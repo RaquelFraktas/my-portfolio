@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import kellyaLaptop from "./../assets/kellya-laptop.png"
+import "./Hero.css";
 
 const roles = ["Full-Stack Developer", "DJ", "Lover... Not a Fighter"];
 
@@ -32,9 +34,8 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="blob" style={{ width: 400, height: 400, background: "#93f8e7", left: 150 }} />
-
       <div className="hero__content">
-        <h1 className="hero__name">Raquel Fraktas</h1>
+        <h1 className="hero__name">Raquel</h1>
         <div className="hero__role">
           <span className="hero__role-text">{displayedRole}</span>
           <span className="cursor" />
@@ -51,6 +52,11 @@ export default function Hero() {
           </button>
         </div>
       </div>
+      <img
+        src={kellyaLaptop}
+        alt="hero__img"
+        className="hero-image"
+      />
     </section>
   )
 }

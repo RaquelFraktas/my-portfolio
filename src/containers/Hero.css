@@ -1,0 +1,61 @@
+.hero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.hero__content {
+  position: relative;
+}
+
+.hero__name {
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.hero__role {
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 60px;
+  min-height: 1.4em;
+  font-family: 'DM Mono', monospace;
+  position: relative;
+}
+
+.hero__role-text {
+  color: #FF6B6B;
+}
+
+.hero__bio {
+  margin-top: 60px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-image{
+  width: 500px;
+  display: flex;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.18;
+  pointer-events: none;
+}
