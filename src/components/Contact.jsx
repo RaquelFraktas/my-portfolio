@@ -1,13 +1,12 @@
 const socials = [
-  { label: "GitHub", icon: "ti-brand-github", href: "#" },
-  { label: "Twitter", icon: "ti-brand-twitter", href: "#" },
-  { label: "LinkedIn", icon: "ti-brand-linkedin", href: "#" },
-  { label: "Email", icon: "ti-mail", href: "mailto:raquel@example.com" },
+  { label: "GitHub", icon: "ti-brand-github", href: "https://github.com/RaquelFraktas" },
+  { label: "LinkedIn", icon: "ti-brand-linkedin", href: "https://www.linkedin.com/in/raquelfraktas/" },
+  { label: "Email", icon: "ti-mail", href: "mailto:send_me_on_linked_in@raquelfraktas.com" },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="section--full-width section--white">
+    <section id="contact" className="section">
       <div className="section__inner">
         <div className="section__header">
           <span className="section__label section__label--purple">// let's talk</span>

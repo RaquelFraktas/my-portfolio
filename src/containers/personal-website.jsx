@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import "./personal-website.css";
-import Contact from "./containers/Contact";
-import Hero from "./containers/Hero";
-import Skills from "./containers/Skills";
+import Contact from "../components/Contact";
+import Hero from "./Hero";
+import Skills from "./Skills";
+import "../neumorphic.css";
+
 
 const projects = [
   {
@@ -25,8 +27,8 @@ const projects = [
     name: "Pixelboard",
     desc: "Collaborative pixel art canvas for teams. Real-time, multiplayer.",
     tags: ["WebSockets", "Canvas API", "Redis"],
-    color: "#FFE66D",
-    bg: "#FFFBEA",
+    color: "#6d7eff",
+    bg: "#d9dcf4",
     link: "#",
   },
   {
@@ -41,7 +43,6 @@ const projects = [
 
 const socials = [
   { label: "GitHub", icon: "ti-brand-github", href: "#" },
-  { label: "Twitter", icon: "ti-brand-twitter", href: "#" },
   { label: "LinkedIn", icon: "ti-brand-linkedin", href: "#" },
   { label: "Email", icon: "ti-mail", href: "mailto:raquel@example.com" },
 ];
@@ -75,7 +76,7 @@ export default function PersonalSite() {
       <Hero />
 
       {/* PROJECTS */}
-      <section id="projects" className="section--full-width section--white">
+      <section id="projects" className="section">
         <div className="section__inner">
           <div className="section__header">
             <span className="section__label section__label--red">// selected work</span>

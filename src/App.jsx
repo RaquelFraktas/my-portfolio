@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import EntryPage from "./EntryPage";
-import PersonalSite from "./personal-website";
+import PersonalSite from "./containers/personal-website";
 
 export default function App() {
   const [entered, setEntered] = useState(false);

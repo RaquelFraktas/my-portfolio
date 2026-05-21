@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero__content {
@@ -16,6 +17,7 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
+  color: #5a6a7e; 
 }
 
 .hero__role {
@@ -29,14 +31,15 @@
 }
 
 .hero__role-text {
-  color: #FF6B6B;
+  color: #3a6ccc;
 }
 
 .hero__bio {
   margin-top: 60px;
   font-size: 17px;
   line-height: 1.7;
-  color: #555;
+  color: #5a6a7e; 
+
   max-width: 520px;
   margin-bottom: 40px;
 }
@@ -50,6 +53,7 @@
 .hero-image{
   width: 500px;
   display: flex;
+  z-index: 40;
 }
 
 .blob {

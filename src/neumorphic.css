@@ -1,0 +1,170 @@
+/* ── Base ────────────────────────────────────────────────────────────────────
+   Wrap any neumorphic section in a .nm container.
+   The background colour (#e0e5ec) is the key — all shadows derive from it.
+────────────────────────────────────────────────────────────────────────────── */
+.nm {
+  background: #e0e5ec;
+  color: #5a6a7e;
+  font-family: system-ui, sans-serif;
+}
+
+/* ── Surface variants ───────────────────────────────────────────────────────── */
+.nm-raised {
+  background: #e0e5ec;
+  border-radius: 14px;
+  box-shadow: 6px 6px 14px #b8bec7, -6px -6px 14px #ffffff;
+}
+
+.nm-inset {
+  background: #e0e5ec;
+  border-radius: 14px;
+  box-shadow: inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────────
+   Use .nm-btn for text buttons, .nm-icon-btn for circular icon buttons.
+────────────────────────────────────────────────────────────────────────────── */
+.nm-btn {
+  background: #e0e5ec;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5a6a7e;
+  padding: 12px 24px;
+  box-shadow: 5px 5px 12px #b8bec7, -5px -5px 12px #ffffff;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+.nm-btn:hover {
+  box-shadow: 7px 7px 16px #b8bec7, -7px -7px 16px #ffffff;
+}
+.nm-btn:active {
+  box-shadow: inset 3px 3px 8px #b8bec7, inset -3px -3px 8px #ffffff;
+  transform: scale(0.98);
+}
+.nm-btn--accent { color: #5b8dee; }
+
+.nm-icon-btn {
+  width: 44px;
+  height: 44px;
+  background: #e0e5ec;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px #b8bec7, -4px -4px 10px #ffffff;
+  color: #5a6a7e;
+  font-size: 18px;
+  transition: box-shadow 0.15s;
+}
+.nm-icon-btn:active {
+  box-shadow: inset 3px 3px 7px #b8bec7, inset -3px -3px 7px #ffffff;
+}
+.nm-icon-btn--lg  { width: 56px; height: 56px; font-size: 22px; }
+.nm-icon-btn--accent { color: #5b8dee; }
+
+/* ── Inputs ──────────────────────────────────────────────────────────────────*/
+.nm-input {
+  background: #e0e5ec;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #5a6a7e;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 3px 3px 8px #b8bec7, inset -3px -3px 8px #ffffff;
+}
+.nm-input::placeholder { color: #a0aec0; }
+.nm-input:focus {
+  box-shadow: inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff;
+}
+
+/* ── Toggle ──────────────────────────────────────────────────────────────────
+   Use the NmToggle component below instead of raw HTML.
+────────────────────────────────────────────────────────────────────────────── */
+.nm-toggle-track {
+  width: 52px;
+  height: 28px;
+  background: #e0e5ec;
+  border-radius: 14px;
+  box-shadow: inset 3px 3px 7px #b8bec7, inset -3px -3px 7px #ffffff;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nm-toggle-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e0e5ec;
+  box-shadow: 2px 2px 5px #b8bec7, -2px -2px 5px #ffffff;
+  transition: left 0.2s, background 0.2s;
+}
+.nm-toggle-track--on .nm-toggle-thumb {
+  left: 28px;
+  background: #5b8dee;
+  box-shadow: 1px 1px 4px #3a6ccc, -1px -1px 4px #85b0ff;
+}
+
+/* ── Slider ──────────────────────────────────────────────────────────────────*/
+.nm-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e0e5ec;
+  box-shadow: inset 2px 2px 5px #b8bec7, inset -2px -2px 5px #ffffff;
+  outline: none;
+}
+.nm-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e0e5ec;
+  box-shadow: 3px 3px 6px #b8bec7, -3px -3px 6px #ffffff;
+  cursor: pointer;
+}
+.nm-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background: #e0e5ec;
+  box-shadow: 3px 3px 6px #b8bec7, -3px -3px 6px #ffffff;
+  cursor: pointer;
+}
+
+/* ── Progress bar ────────────────────────────────────────────────────────────*/
+.nm-progress {
+  height: 6px;
+  background: #e0e5ec;
+  border-radius: 3px;
+  box-shadow: inset 2px 2px 5px #b8bec7, inset -2px -2px 5px #ffffff;
+  overflow: hidden;
+}
+.nm-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5b8dee, #8ab0ff);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+/* ── Typography helpers ──────────────────────────────────────────────────────*/
+.nm-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a9bb0;
+  margin-bottom: 10px;
+}
+.nm-title  { font-size: 14px; font-weight: 600; color: #5a6a7e; margin: 0 0 4px; }
+.nm-sub    { font-size: 12px; color: #8a9bb0; margin: 0; }

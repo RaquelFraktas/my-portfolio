@@ -1,6 +1,7 @@
 import "./EntryPage.css";
-import DodgingImage from "./DodgingImage";
+import DodgingImage from "./containers/DodgingImage";
 import kellya from "./assets/kellyatransparent.png"
+import "./neumorphic.css";
 
 
 export default function EntryPage({ onEnter }) {
