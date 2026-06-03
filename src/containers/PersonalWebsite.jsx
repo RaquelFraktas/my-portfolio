@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import "./personal-website.css";
-import Contact from "../components/Contact";
+import "./PersonalWebsite.css";
 import Hero from "./Hero";
 import Skills from "./Skills";
+import Socials from "../components/Socials";
 import "../neumorphic.css";
 
 
@@ -50,7 +50,7 @@ const socials = [
 export default function PersonalSite() {
   const [activeSection, setActiveSection] = useState("home");
 
-  const navItems = ["home", "projects", "skills", "contact"];
+  const navItems = ["home", "projects", "skills", "socials"];
 
   return (
     <div className="site-wrapper">
@@ -105,7 +105,7 @@ export default function PersonalSite() {
       </section>
 
       <Skills />
-      <Contact />
+      <Socials />
 
       <footer className="site-footer">
         built with <span className="site-footer__heart">♥</span> by raquel fraktas · {new Date().getFullYear()}

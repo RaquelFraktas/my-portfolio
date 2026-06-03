@@ -52,3 +52,6 @@
     border-right-color: var(--border);
   }
 }
+
+.field-wrap { display: flex; flex-direction: column; flex: 1; }
+.field-error { color: #ee0055; font-size: 12px; margin-top: 4px; }

@@ -252,17 +252,7 @@ section {
   margin-bottom: 10px;
 }
 
-/* CONTACT */
-.contact-form {
-  display: contents;
-}
 
-.contact-form__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
 
 input,
 textarea {
@@ -289,12 +279,10 @@ textarea {
 }
 
 .social-links {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid #eee;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-btn {
@@ -335,9 +323,5 @@ textarea {
 @media (max-width: 600px) {
   section {
     padding: 60px 16px;
-  }
-
-  .contact-form__row {
-    grid-template-columns: 1fr;
   }
 }
