@@ -1,45 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./PersonalWebsite.css";
 import Hero from "./Hero";
 import Skills from "./Skills";
 import Socials from "../components/Socials";
 import "../neumorphic.css";
-
-
-const projects = [
-  {
-    name: "DevFlow",
-    desc: "A drag-and-drop CI/CD pipeline builder with real-time preview.",
-    tags: ["React", "Node.js", "Docker"],
-    color: "#FF6B6B",
-    bg: "#FFF0F0",
-    link: "#",
-  },
-  {
-    name: "Querycraft",
-    desc: "Natural language to SQL converter powered by LLMs.",
-    tags: ["Python", "FastAPI", "PostgreSQL"],
-    color: "#4ECDC4",
-    bg: "#F0FAFA",
-    link: "#",
-  },
-  {
-    name: "Pixelboard",
-    desc: "Collaborative pixel art canvas for teams. Real-time, multiplayer.",
-    tags: ["WebSockets", "Canvas API", "Redis"],
-    color: "#6d7eff",
-    bg: "#d9dcf4",
-    link: "#",
-  },
-  {
-    name: "Logsmith",
-    desc: "Structured logging library with zero-config observability dashboards.",
-    tags: ["TypeScript", "Go", "Grafana"],
-    color: "#A29BFE",
-    bg: "#F3F2FF",
-    link: "#",
-  },
-];
 
 const socials = [
   { label: "GitHub", icon: "ti-brand-github", href: "#" },
@@ -49,8 +14,27 @@ const socials = [
 
 export default function PersonalSite() {
   const [activeSection, setActiveSection] = useState("home");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const navItems = ["home", "skills", "socials"];
+  useEffect(() => {
+    const requestedSection = location.state?.section;
+    if (!requestedSection) return;
+
+    setActiveSection(requestedSection);
+
+    if (requestedSection === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const target = document.getElementById(requestedSection);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.state]);
+
+  const navItems = ["home", "projects", "skills", "socials"];
 
   return (
     <div id="home" className="site-wrapper">
@@ -67,11 +51,18 @@ export default function PersonalSite() {
               className={`nav-link${activeSection === s ? " active" : ""}`}
               onClick={() => {
                 setActiveSection(s);
+
                 if (s === "home") {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate("/", { state: { section: "home" } });
                   return;
                 }
-                document.getElementById(s)?.scrollIntoView({ behavior: "smooth" });
+
+                if (s === "projects") {
+                  navigate("/projects");
+                  return;
+                }
+
+                navigate("/", { state: { section: s } });
               }}
             >
               {s}
