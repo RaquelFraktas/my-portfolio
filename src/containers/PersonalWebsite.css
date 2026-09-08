@@ -11,57 +11,24 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --nav-bg: rgba(224, 229, 236, 0.86);
+  --nav-button-bg: #e0e5ec;
+  --nav-shadow: 6px 6px 14px #b8bec7, -6px -6px 14px #ffffff;
+  --nav-shadow-strong: 7px 7px 16px #b8bec7, -7px -7px 16px #ffffff;
+  --nav-shadow-inset: inset 3px 3px 8px #b8bec7, inset -3px -3px 8px #ffffff;
+  --nav-padding-x: 24px;
+  --nav-padding-y: 12px;
+  --nav-button-padding-x: 24px;
+  --nav-button-padding-y: 12px;
+  --nav-radius: 12px;
+}
+
 .site-wrapper {
   background: #e0e5ec;
   color: #5a6a7e;
   font-family: system-ui, sans-serif;
   width: 100%;
-}
-
-/* NAV */
-.site-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(12px);
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-nav__logo {
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-}
-
-.site-nav__links {
-  display: flex;
-  gap: 4px;
-}
-
-.nav-link {
-background: #e0e5ec;
-  border: none;
-  cursor: pointer;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #5a6a7e;
-  padding: 12px 24px;
-  box-shadow: 5px 5px 12px #b8bec7, -5px -5px 12px #ffffff;
-  transition: box-shadow 0.15s, transform 0.1s;
-}
-
-.nav-link:hover {
-  box-shadow: 7px 7px 16px #b8bec7, -7px -7px 16px #ffffff;
-
-}
-
-.nav-link.active {
-  box-shadow: inset 3px 3px 8px #b8bec7, inset -3px -3px 8px #ffffff;
-  transform: scale(0.98);
 }
 
 /* SECTIONS */

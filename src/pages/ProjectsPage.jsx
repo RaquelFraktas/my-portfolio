@@ -1,4 +1,5 @@
 import SiteNav from "../components/SiteNav";
+import CloudShader from "../components/CloudShader";
 import MusicPage from "./MusicPage";
 import horsesAndDivorcesImage from "../assets/horsesanddivorces.png";
 import "./ProjectsPage.css";
@@ -6,6 +7,10 @@ import "./ProjectsPage.css";
 export default function ProjectsPage() {
   return (
     <main className="projects-page">
+      <div className="projects-page__shader">
+        <CloudShader style={{ position: "absolute", inset: 0, zIndex: 0 }} />
+      </div>
+
       <SiteNav activeSection="projects" className="projects-page__nav" />
 
       <div className="projects-page__inner">

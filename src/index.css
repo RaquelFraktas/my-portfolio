@@ -9,6 +9,16 @@
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --nav-bg: rgba(224, 229, 236, 0.86);
+  --nav-button-bg: #e0e5ec;
+  --nav-shadow: 6px 6px 14px #b8bec7, -6px -6px 14px #ffffff;
+  --nav-shadow-strong: 7px 7px 16px #b8bec7, -7px -7px 16px #ffffff;
+  --nav-shadow-inset: inset 3px 3px 8px #b8bec7, inset -3px -3px 8px #ffffff;
+  --nav-padding-x: 24px;
+  --nav-padding-y: 12px;
+  --nav-button-padding-x: 24px;
+  --nav-button-padding-y: 12px;
+  --nav-radius: 12px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -51,6 +61,52 @@
 
 body {
   margin: 0;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nav-padding-y) var(--nav-padding-x);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--nav-shadow);
+}
+
+.site-nav__logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-link {
+  background: var(--nav-button-bg);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--nav-radius);
+  font-size: 14px;
+  font-weight: 600;
+  color: #5a6a7e;
+  padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
+  box-shadow: var(--nav-shadow);
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+
+.nav-link:hover {
+  box-shadow: var(--nav-shadow-strong);
+}
+
+.nav-link.active {
+  box-shadow: var(--nav-shadow-inset);
+  transform: scale(0.98);
 }
 
 #root {
