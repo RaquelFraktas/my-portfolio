@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EntryPage from "./EntryPage";
 import PersonalSite from "./containers/PersonalWebsite";
+import ProjectsPage from "./pages/ProjectsPage";
 
 export default function App() {
   const [entered, setEntered] = useState(false);
@@ -14,7 +16,7 @@ export default function App() {
     setExiting(true);
     setTimeout(() => setEntered(true), 650);
   }
-  
+
   useEffect(() => {
     function onKeyDown(e) {
       if (e.code === "Space") {
@@ -26,14 +28,22 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  if (entered) return <PersonalSite />;
+  if (!entered) {
+    return (
+      <div
+        ref={entryRef}
+        className={exiting ? "entry--exiting" : ""}
+      >
+        <EntryPage onEnter={handleEnter} />
+      </div>
+    );
+  }
 
   return (
-    <div
-      ref={entryRef}
-      className={exiting ? "entry--exiting" : ""}
-    >
-      <EntryPage onEnter={handleEnter} />
-    </div>
+    <Routes>
+      <Route path="/" element={<PersonalSite />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
