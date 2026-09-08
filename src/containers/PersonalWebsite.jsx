@@ -53,7 +53,7 @@ export default function PersonalSite() {
   const navItems = ["home", "skills", "socials"];
 
   return (
-    <div className="site-wrapper">
+    <div id="home" className="site-wrapper">
 
       {/* NAV */}
       <nav className="site-nav">
@@ -65,7 +65,14 @@ export default function PersonalSite() {
             <button
               key={s}
               className={`nav-link${activeSection === s ? " active" : ""}`}
-              onClick={() => { setActiveSection(s); document.getElementById(s)?.scrollIntoView({ behavior: "smooth" }); }}
+              onClick={() => {
+                setActiveSection(s);
+                if (s === "home") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  return;
+                }
+                document.getElementById(s)?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               {s}
             </button>
