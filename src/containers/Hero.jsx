@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import kellyaLaptop from "./../assets/kellya-laptop.png"
 import "./Hero.css";
 import CloudShader from "../components/CloudShader";
-// import SineWarpShader from "./SineWarpShader";
-
 
 const roles = ["Full-Stack Developer", "DJ", "Lover... Not a Fighter"];
 
