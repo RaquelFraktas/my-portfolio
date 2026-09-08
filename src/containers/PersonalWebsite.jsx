@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./PersonalWebsite.css";
 import Hero from "./Hero";
 import Skills from "./Skills";
 import Socials from "../components/Socials";
+import SiteNav from "../components/SiteNav";
 import "../neumorphic.css";
 
 const socials = [
@@ -14,7 +15,6 @@ const socials = [
 
 export default function PersonalSite() {
   const [activeSection, setActiveSection] = useState("home");
-  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
@@ -34,42 +34,9 @@ export default function PersonalSite() {
     }
   }, [location.state]);
 
-  const navItems = ["home", "projects", "skills", "socials"];
-
   return (
     <div id="home" className="site-wrapper">
-
-      {/* NAV */}
-      <nav className="site-nav">
-        <span className="site-nav__logo">
-          raquel fraktas
-        </span>
-        <div className="site-nav__links">
-          {navItems.map((s) => (
-            <button
-              key={s}
-              className={`nav-link${activeSection === s ? " active" : ""}`}
-              onClick={() => {
-                setActiveSection(s);
-
-                if (s === "home") {
-                  navigate("/", { state: { section: "home" } });
-                  return;
-                }
-
-                if (s === "projects") {
-                  navigate("/projects");
-                  return;
-                }
-
-                navigate("/", { state: { section: s } });
-              }}
-            >
-              {s}
-            </button>
-          ))}
-        </div>
-      </nav>
+      <SiteNav activeSection={activeSection} />
 
       <Hero />
       <Skills />

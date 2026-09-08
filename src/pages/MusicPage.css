@@ -1,0 +1,60 @@
+.music-page {
+  width: 100%;
+}
+
+.music-page__card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+  background: #e0e5ec;
+  border-radius: 24px;
+  box-shadow: 10px 10px 22px #b8bec7, -10px -10px 22px #ffffff;
+}
+
+.music-page__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.music-page__title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #5a6a7e;
+}
+
+.music-page__description {
+  margin: 0;
+  line-height: 1.7;
+  color: #5a6a7e;
+  font-size: 1rem;
+}
+
+.music-page__player-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 22px 18px;
+  border-radius: 20px;
+  background: #dfe6f0;
+  box-shadow: inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff;
+}
+
+.music-page__player {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 14px;
+  background: #e0e5ec;
+  box-shadow: 0 12px 24px rgba(95, 108, 126, 0.12);
+}
+
+@media (max-width: 800px) {
+  .music-page__card {
+    grid-template-columns: 1fr;
+  }
+}
