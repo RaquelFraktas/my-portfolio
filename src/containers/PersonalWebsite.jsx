@@ -50,7 +50,7 @@ const socials = [
 export default function PersonalSite() {
   const [activeSection, setActiveSection] = useState("home");
 
-  const navItems = ["home", "projects", "skills", "socials"];
+  const navItems = ["home", "skills", "socials"];
 
   return (
     <div className="site-wrapper">
@@ -74,36 +74,6 @@ export default function PersonalSite() {
       </nav>
 
       <Hero />
-
-      {/* PROJECTS */}
-      <section id="projects" className="section">
-        <div className="section__inner">
-          <div className="section__header">
-            <span className="section__label section__label--red">// selected work</span>
-            <h2 className="section__heading">Things I've built</h2>
-          </div>
-          <div className="projects-grid">
-            {projects.map((p) => (
-              <div key={p.name} className="proj-card">
-                <div
-                  className="proj-card__icon"
-                  style={{ background: p.bg, border: `1.5px solid ${p.color}30` }}
-                >
-                  <i className="ti ti-code" style={{ color: p.color }} />
-                </div>
-                <h3 className="proj-card__name">{p.name}</h3>
-                <p className="proj-card__desc">{p.desc}</p>
-                <div className="proj-card__tags">
-                  {p.tags.map((t) => (
-                    <span key={t} className="tag" style={{ background: p.bg, color: p.color, border: `1px solid ${p.color}40` }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <Skills />
       <Socials />
 

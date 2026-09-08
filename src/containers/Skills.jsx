@@ -1,13 +1,14 @@
 const skills = [
   { name: "TypeScript", color: "#3178C6" },
   { name: "React", color: "#61DAFB" },
-  { name: "Node.js", color: "#339933" },
+  { name: "Ruby on Rails", color: "#339933" },
   { name: "Python", color: "#3776AB" },
-  { name: "Go", color: "#00ADD8" },
+  { name: "Javascript", color: "#F7DF1E" },
+  { name: "Datadog", color: "#00ADD8" },
   { name: "PostgreSQL", color: "#4169E1" },
   { name: "Docker", color: "#2496ED" },
   { name: "AWS", color: "#FF9900" },
-  { name: "GraphQL", color: "#E10098" },
+  { name: "Cloudflare", color: "#E10098" },
   { name: "Redis", color: "#DC382D" },
 ];
 
@@ -30,7 +31,6 @@ export default function Skills() {
         {[
           { num: "4+", label: "Years experience", color: "#FF6B6B" },
           { num: "30+", label: "Projects shipped", color: "#4ECDC4" },
-          { num: "12k+", label: "GitHub stars", color: "#FFE66D" },
           { num: "∞", label: "Bugs fixed", color: "#A29BFE" },
         ].map((s) => (
           <div key={s.label} className="stat-card">

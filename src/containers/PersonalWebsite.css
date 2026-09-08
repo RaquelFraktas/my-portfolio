@@ -137,11 +137,11 @@ section {
 }
 
 /* PROJECT CARDS */
-.projects-grid {
+/* .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 20px;
-}
+} */
 
 .proj-card {
   background: #e0e5ec;
@@ -194,6 +194,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-pill {

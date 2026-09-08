@@ -50,16 +50,16 @@ export default function Hero() {
         </div>
         <p className="hero__bio">
           I build things for the web — from elegant APIs to delightful UIs. Passionate about developer
-          tooling, distributed systems, and making complex things feel simple.
+          tooling, distributed systems, and making complex things feel simple and fun to use.
         </p>
-        <div className="hero__actions">
+        {/* <div className="hero__actions">
           <button className="cta-btn" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
             View my work <i className="ti ti-arrow-right" />
           </button>
           <button className="cta-btn" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
             Get in touch
           </button>
-        </div>
+        </div> */}
       </div>
 
       <img src={kellyaLaptop} alt="hero__img" className="hero-image" />
