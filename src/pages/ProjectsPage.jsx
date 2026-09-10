@@ -3,6 +3,7 @@ import CloudShader from "../components/CloudShader";
 import MusicPage from "./MusicPage";
 import horsesAndDivorcesImage from "../assets/horsesanddivorces.png";
 import "./ProjectsPage.css";
+import TypeaheadPage from "./TypeaheadPage";
 
 export default function ProjectsPage() {
   return (
@@ -55,6 +56,8 @@ export default function ProjectsPage() {
               />
             </a>
           </section>
+          <TypeaheadPage/>
+
         </div>
       </div>
     </main>

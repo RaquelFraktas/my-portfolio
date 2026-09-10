@@ -66,6 +66,7 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
   align-items: center;
+  width: 100%;
   padding: 32px 28px;
   border-radius: 24px;
   background: #e0e5ec;
@@ -74,6 +75,18 @@
 
 .project-feature--game {
   background: linear-gradient(135deg, #f7efe8, #e0e5ec);
+}
+
+.project-feature--typeahead {
+  grid-template-columns: 1fr;
+  background: linear-gradient(135deg, #edf6f5, #e0e5ec);
+}
+
+.project-feature--typeahead .project-feature__copy,
+.project-feature--typeahead .project-feature__preview {
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
 }
 
 .project-feature__copy {
