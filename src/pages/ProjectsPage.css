@@ -73,13 +73,8 @@
   box-shadow: 10px 10px 22px #b8bec7, -10px -10px 22px #ffffff;
 }
 
-.project-feature--game {
-  background: linear-gradient(135deg, #f7efe8, #e0e5ec);
-}
-
 .project-feature--typeahead {
   grid-template-columns: 1fr;
-  background: linear-gradient(135deg, #edf6f5, #e0e5ec);
 }
 
 .project-feature--typeahead .project-feature__copy,
