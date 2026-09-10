@@ -32,15 +32,6 @@ html {
 }
 
 /* SECTIONS */
-section {
-  padding: 80px 24px;
-  margin: 0 auto;
-}
-
-.section__inner {
-  max-width: 860px;
-  margin: 0 auto;
-}
 
 .section__label {
   font-family: 'DM Mono', monospace;
@@ -51,34 +42,6 @@ section {
 .section__label--red   { color: #FF6B6B; }
 .section__label--teal  { color: #4ECDC4; }
 .section__label--purple { color: #A29BFE; }
-
-.section__heading {
-  font-size: clamp(28px, 5vw, 42px);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-top: 8px;
-  color: #5a6a7e
-}
-
-.section__header {
-  margin-bottom: 48px;
-}
-
-/* CURSOR */
-.cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background: #FF6B6B;
-  margin-left: 2px;
-  vertical-align: text-bottom;
-  animation: blink 0.85s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
 
 /* BUTTONS */
 .cta-btn {
@@ -193,6 +156,7 @@ section {
 
 .stats-grid {
   margin-top: 64px;
+  margin-bottom: 64px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
