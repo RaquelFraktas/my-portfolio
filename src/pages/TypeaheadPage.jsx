@@ -69,10 +69,8 @@ export default function TypeaheadPage() {
     <section className="project-feature project-feature--typeahead">
 
       <div className="typeahead-page__inner">
-        <header className="typeahead-page__header">
-          <p className="typeahead-page__label">Systems design</p>
-          <h1 className="typeahead-page__title">Typeahead</h1>
-        </header>
+        <p className="typeahead-page__label">Systems design</p>
+        <h2 className="typeahead-page__title">Typeahead</h2>
 
         <div className="typeahead-page__panel">
           <form className="typeahead-form" onSubmit={handleSubmit}>
@@ -103,7 +101,7 @@ export default function TypeaheadPage() {
                       <span aria-hidden="true">↗</span>
                       {query}
                     </span>
-                    <span className="typeahead-item__badge">Trending</span>
+                    <span className="typeahead-item__badge"> {"Trending <333"}</span>
                   </button>
                 </li>
               ))}
