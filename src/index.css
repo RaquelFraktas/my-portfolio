@@ -92,6 +92,7 @@ body {
   border: none;
   cursor: pointer;
   border-radius: var(--nav-radius);
+  font-family: inherit;
   font-size: 14px;
   font-weight: 600;
   color: #5a6a7e;
