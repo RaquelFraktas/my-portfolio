@@ -98,13 +98,14 @@ body {
   color: #5a6a7e;
   padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
   box-shadow: var(--nav-shadow);
-  transition: box-shadow 0.15s, transform 0.1s;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
   box-shadow: var(--nav-shadow-inset);
   transform: scale(0.98);
+  transition-delay: 0.18s;
 }
 
 #root {
