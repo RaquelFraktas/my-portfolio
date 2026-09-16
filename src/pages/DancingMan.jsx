@@ -1,7 +1,7 @@
 export default function DancingMan() {
   return (
     <div className="dancing-man">
-      <p>Coming soon...</p>
+      <p><em>Something interesting coming soon...</em></p>
     </div>
   );
 } 

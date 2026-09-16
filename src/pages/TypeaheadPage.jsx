@@ -5,7 +5,7 @@ import "./TypeaheadPage.css";
 const TRENDING_QUERIES = [
   "raquel is amazingggg",
   "what is the meaning to life",
-  "am i penagnt"
+  "what is consciousness and the self "
 ];
 
 const GOOGLE_SEARCH_URL = "https://www.google.com/search?q=";
@@ -71,6 +71,8 @@ export default function TypeaheadPage() {
       <div className="typeahead-page__inner">
         <p className="typeahead-page__label">Systems design</p>
         <h2 className="typeahead-page__title">Typeahead</h2>
+        <span><em>COMING SOON 🚧</em></span>
+        <p>This project is a systems design implementation for a typeahead search feature.</p>
 
         <div className="typeahead-page__panel">
           <form className="typeahead-form" onSubmit={handleSubmit}>
