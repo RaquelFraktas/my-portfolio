@@ -101,10 +101,7 @@ body {
   transition: box-shadow 0.15s, transform 0.1s;
 }
 
-.nav-link:hover {
-  box-shadow: var(--nav-shadow-strong);
-}
-
+.nav-link:hover,
 .nav-link.active {
   box-shadow: var(--nav-shadow-inset);
   transform: scale(0.98);
