@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import kellyaLaptop from "./../assets/kellya-laptop.png"
 import "./Hero.css";
 import CloudShader from "../components/CloudShader";
@@ -6,6 +7,7 @@ import CloudShader from "../components/CloudShader";
 const roles = ["Full-Stack Developer", "DJ", "Lover... Not a Fighter"];
 
 export default function Hero() {
+  const navigate = useNavigate();
   const [roleIdx, setRoleIdx] = useState(0);
   const [displayedRole, setDisplayedRole] = useState("");
   const [typing, setTyping] = useState(true);
@@ -50,14 +52,14 @@ export default function Hero() {
           I build things for the web — from elegant APIs to delightful UIs. Passionate about developer
           tooling, distributed systems, and making complex things feel simple and fun to use.
         </p>
-        {/* <div className="hero__actions">
-          <button className="cta-btn" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
+        <div className="hero__actions">
+          <button className="cta-btn" onClick={() => navigate("/projects")}>
             View my work <i className="ti ti-arrow-right" />
           </button>
-          <button className="cta-btn" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+          {/* <button className="cta-btn" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
             Get in touch
-          </button>
-        </div> */}
+          </button> */}
+        </div>
       </div>
 
       <img src={kellyaLaptop} alt="hero__img" className="hero-image" />
