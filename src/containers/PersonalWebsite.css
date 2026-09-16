@@ -142,7 +142,8 @@ html {
   cursor: default;
 }
 
-.skill-pill:hover {
+.skill-pill:hover, 
+.stat-card:hover {
   transform: scale(1.06);
   box-shadow: inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff;
 }
@@ -169,6 +170,7 @@ html {
   text-align: center;
   background: #e0e5ec;
   box-shadow: 6px 6px 14px #b8bec7, -6px -6px 14px #ffffff;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .stat-card__num {
