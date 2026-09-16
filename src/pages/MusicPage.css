@@ -39,10 +39,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 22px 18px;
-  border-radius: 20px;
-  background: #dfe6f0;
-  box-shadow: inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff;
 }
 
 .music-page__player {
