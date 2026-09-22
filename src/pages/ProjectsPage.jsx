@@ -12,7 +12,7 @@ export default function ProjectsPage() {
       <div className="projects-page__inner">
         <header className="projects-page__header">
           <div>
-            <p className="section__label section__label--teal">Selected work</p>
+            <p className="section__label">// selected work</p>
             <h1 className="projects-page__title">Projects</h1>
           </div>
         </header>
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
 
           <section className="project-feature project-feature--game">
             <div className="project-feature__copy">
-              <p className="section__label section__label--red">Game</p>
+              <p className="section__label">Game</p>
               <h2 className="project-feature__title">Horses and Divorces</h2>
               <p className="project-feature__description">
                 A very serious game about marriages and number-guessing built in collaboration with the Wikimedia Foundation.
