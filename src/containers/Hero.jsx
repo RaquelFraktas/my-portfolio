@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import kellyaLaptop from "./../assets/kellya-laptop.png"
+import kellyatransparent from "./../assets/kellyatransparent.png"
 import "./Hero.css";
 import CloudShader from "../components/CloudShader";
 
@@ -62,7 +62,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <img src={kellyaLaptop} alt="hero__img" className="hero-image" />
+      <img src={kellyatransparent} alt="hero__img" className="hero-image" />
     </section>
   );
 }
