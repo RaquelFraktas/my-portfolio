@@ -1,5 +1,5 @@
 import SiteNav from "../components/SiteNav";
-import MusicPage from "./MusicPage";
+// import MusicPage from "./MusicPage";
 import horsesAndDivorcesImage from "../assets/horsesanddivorces.png";
 import "./ProjectsPage.css";
 import TypeaheadPage from "./TypeaheadPage";
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         </header>
 
         <div className="projects-page__stack">
-          <MusicPage />
+          {/* <MusicPage /> */}
 
           <section className="project-feature project-feature--game">
             <div className="project-feature__copy">
