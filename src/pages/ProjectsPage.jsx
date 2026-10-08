@@ -1,5 +1,5 @@
 import SiteNav from "../components/SiteNav";
-// import MusicPage from "./MusicPage";
+import MatrixProject from "../containers/MatrixProject";
 import horsesAndDivorcesImage from "../assets/horsesanddivorces.png";
 import "./ProjectsPage.css";
 import TypeaheadPage from "./TypeaheadPage";
@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   return (
     <main className="projects-page">
       <SiteNav activeSection="projects" className="projects-page__nav" />
-
+      
       <div className="projects-page__inner">
         <header className="projects-page__header">
           <div>
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         </header>
 
         <div className="projects-page__stack">
-          {/* <MusicPage /> */}
+          <MatrixProject/>
 
           <section className="project-feature project-feature--game">
             <div className="project-feature__copy">

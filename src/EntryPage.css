@@ -47,8 +47,8 @@
   overflow: visible;
   fill: #ffffffe9;
   font-family: 'Shadows Into Light', cursive;
-  font-size: 20px;
-  animation: hintFloat 4.5s ease-out both;
+  font-size: 25px;
+  animation: hintFloat 6.5s ease-out both;
   pointer-events: none;
 }
 
