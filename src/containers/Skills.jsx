@@ -1,15 +1,17 @@
+
+const color = "#be6affdd";
 const skills = [
-  { name: "TypeScript", color: "#3178C6" },
-  { name: "React", color: "#61DAFB" },
-  { name: "Ruby on Rails", color: "#339933" },
-  { name: "Python", color: "#3776AB" },
-  { name: "Javascript", color: "#F7DF1E" },
-  { name: "Datadog", color: "#00ADD8" },
-  { name: "PostgreSQL", color: "#4169E1" },
-  { name: "Docker", color: "#2496ED" },
-  { name: "AWS", color: "#FF9900" },
-  { name: "Cloudflare", color: "#E10098" },
-  { name: "Redis", color: "#DC382D" },
+  { name: "TypeScript", color: color },
+  { name: "React", color: color },
+  { name: "Ruby on Rails", color: color },
+  { name: "Python", color: color },
+  { name: "Javascript", color: color },
+  { name: "Datadog", color: color },
+  { name: "PostgreSQL", color: color },
+  { name: "Docker", color: color },
+  { name: "AWS", color: color },
+  { name: "Cloudflare", color: color },
+  { name: "Redis", color: color },
 ];
 
 export default function Skills() {
@@ -29,9 +31,9 @@ export default function Skills() {
       </div>
       <div className="stats-grid">
         {[
-          { num: "4+", label: "Years experience", color: "#FF6B6B" },
-          { num: "30+", label: "Projects shipped", color: "#4ECDC4" },
-          { num: "∞", label: "Bugs fixed", color: "#A29BFE" },
+          { num: "4+", label: "Years experience", color: color },
+          { num: "30+", label: "Projects shipped", color: color },
+          { num: "∞", label: "Bugs fixed", color: color },
         ].map((s) => (
           <div key={s.label} className="stat-card">
             <div className="stat-card__num" style={{ color: s.color }}>{s.num}</div>
