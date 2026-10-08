@@ -1,5 +1,6 @@
 import SiteNav from "../components/SiteNav";
 import MatrixProject from "../containers/MatrixProject";
+import NoSignalProject from "../containers/NoSignalProject";
 import HorsesandDivorcesProject from "../containers/HorsesandDivorcesProject";
 import "./ProjectsPage.css";
 import TypeaheadPage from "./TypeaheadPage";
@@ -19,6 +20,7 @@ export default function ProjectsPage() {
 
         <div className="projects-page__stack">
           <MatrixProject/>
+          <NoSignalProject/>
           <HorsesandDivorcesProject/>
           <TypeaheadPage/>
         </div>
