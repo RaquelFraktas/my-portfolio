@@ -25,7 +25,13 @@ export default function ProjectsPage() {
               <p className="section__label">Game</p>
               <h2 className="project-feature__title">Horses and Divorces</h2>
               <p className="project-feature__description">
-                A very serious game about marriages and number-guessing built in collaboration with the Wikimedia Foundation.
+                A very serious game about marriages and number-guessing built in collaboration with the Wikimedia Foundation. Built during the Wikimedia Hackathon. This game hits the Wikipedia API for its content.
+              </p>
+              <p className="project-tech">
+                <span className="stack-title">Stack used:</span>
+                <span className="stack-items">
+                  Ruby on Rails, React, Next.js, Typescript, Twitch.io, Wikipedia API
+                </span>
               </p>
               <a
                 className="project-feature__link"

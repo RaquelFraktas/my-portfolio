@@ -5,9 +5,18 @@ export default function MatrixProject() {
     <section className="project-feature project-feature--game">
       <div className="project-feature__copy">
         <p className="section__label">Game</p>
-        <h2 className="project-feature__title">Matrix Tag</h2>
+        <h2 className="project-feature__title">Down the Rabbit Hole</h2>
         <p className="project-feature__description">
-          A game where users tag each other in real-time based on a QR code.
+          A Matrix-inspired game of tag built with Ruby on Rails, Hotwire/Stimulus and Turbo. 
+          Every player gets a unique QR code that other players can scan to make a kill. 
+          Stay alive, rack up kills, and watch your status change as the game unfolds. Red pill or blue pill? 
+          Either way, you're in the system now.
+        </p>
+        <p className="project-tech">
+          <span className="stack-title">Stack used:</span>
+          <span className="stack-items">
+            Ruby on Rails, Hotwire/Stimulus, Turbo, Redis, PostgreSQL, Heroku, and rqrcode for qr generation
+          </span>
         </p>
         <a
           className="project-feature__link"
