@@ -1,19 +1,24 @@
-section.hero{
-  padding-bottom: 0px
-}
-
 .hero {
-  padding-top: 100px;
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
   width: 100%;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100svh - 50px);
 }
 
 .hero__content {
   position: relative;
   overflow: hidden;
+  min-width: 0;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
 }
 
 .hero__name {
@@ -57,8 +62,13 @@ section.hero{
 }
 
 .hero-image{
-  width: 500px;
-  display: flex;
+  justify-self: center;
+  align-self: end;
+  width: min(100%, 500px);
+  max-height: calc(100svh - 50px);
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
   z-index: 40;
 }
 
@@ -68,4 +78,5 @@ section.hero{
   filter: blur(60px);
   opacity: 0.18;
   pointer-events: none;
+  background-color: var(--accent-light);
 }

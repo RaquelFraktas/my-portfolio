@@ -40,7 +40,7 @@ export default function Hero() {
       <CloudShader style={{ position: "absolute", inset: 0, zIndex: 0 }} />
 
       {/* Remove or keep the blob — it'll layer on top of the shader */}
-      <div className="blob" style={{ width: 400, height: 400, background: "#93f8e7", left: 150 }} />
+      <div className="blob" style={{ width: 400, height: 400, left: 200 }} />
 
       <div className="hero__content">
         <h1 className="hero__name">Raquel</h1>
