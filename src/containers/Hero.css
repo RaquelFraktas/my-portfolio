@@ -78,5 +78,21 @@
   filter: blur(60px);
   opacity: 0.18;
   pointer-events: none;
+  left: 200px;
   background-color: var(--accent-light);
+}
+
+@media (max-width: 996px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .blob {
+    top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    display: none;
+  }
 }
