@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import kellyatransparent from "./../assets/kellyatransparent.png"
+import RaquelAsBaby from "./../assets/raquel_as_baby.png"
 import "./Hero.css";
 import CloudShader from "../components/CloudShader";
 
@@ -40,7 +40,7 @@ export default function Hero() {
       <CloudShader style={{ position: "absolute", inset: 0, zIndex: 0 }} />
 
       {/* Remove or keep the blob — it'll layer on top of the shader */}
-      <div className="blob" style={{ width: 400, height: 400, left: 200 }} />
+      <div className="blob" style={{ width: 400, height: 400 }} />
 
       <div className="hero__content">
         <h1 className="hero__name">Raquel</h1>
@@ -62,7 +62,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <img src={kellyatransparent} alt="hero__img" className="hero-image" />
+      <img src={RaquelAsBaby} alt="me back in the day" title="Me back in the day" className="hero-image" />
     </section>
   );
 }

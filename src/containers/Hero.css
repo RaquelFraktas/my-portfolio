@@ -62,7 +62,6 @@
 
 .hero-image{
   justify-self: center;
-  align-self: end;
   width: min(100%, 500px);
   max-height: calc(100svh - 50px);
   object-fit: contain;
@@ -87,6 +86,9 @@
   }
   .blob {
     top: 100px;
+  }
+  .hero-image {
+    padding-bottom: 20px;
   }
 }
 
