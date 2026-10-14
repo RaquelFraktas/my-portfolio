@@ -4,7 +4,7 @@ import RaquelAsBaby from "./../assets/raquel_as_baby.png"
 import "./Hero.css";
 import CloudShader from "../components/CloudShader";
 
-const roles = ["Full-Stack Developer", "DJ", "Lover... Not a Fighter"];
+const roles = ["Full-Stack Developer", "DIYer","DJ", "Friend" ,"Lover... Not a Fighter"];
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -39,19 +39,19 @@ export default function Hero() {
       {/* Shader background */}
       <CloudShader style={{ position: "absolute", inset: 0, zIndex: 0 }} />
 
-      {/* Remove or keep the blob — it'll layer on top of the shader */}
-      <div className="blob" style={{ width: 400, height: 400 }} />
-
       <div className="hero__content">
         <h1 className="hero__name">Raquel</h1>
         <div className="hero__role">
           <span className="hero__role-text">{displayedRole}</span>
           <span className="cursor" />
         </div>
-        <p className="hero__bio">
-          I build things for the web — from elegant APIs to delightful UIs. Passionate about developer
-          tooling, distributed systems, and making complex things feel simple and fun to use.
-        </p>
+        <div className="hero__bio-wrap">
+          <div className="blob" aria-hidden="true" />
+          <p className="hero__bio">
+            I build things for the web — from elegant APIs to delightful UIs. Passionate about developer
+            tooling, distributed systems, and making complex things feel simple and fun to use.
+          </p>
+        </div>
         <div className="hero__actions">
           <button className="cta-btn" onClick={() => navigate("/projects")}>
             View my work <i className="ti ti-arrow-right" />

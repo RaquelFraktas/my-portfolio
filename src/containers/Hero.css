@@ -10,6 +10,7 @@
 
 .hero__content {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   min-width: 0;
   padding: 10px 16px;
@@ -27,7 +28,7 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
-  color: #5a6a7e; 
+  color: #423552; 
 }
 
 .hero__role {
@@ -41,16 +42,23 @@
 }
 
 .hero__role-text {
-  color: #3a6ccc;
+  color: var(--text);
+}
+
+.hero__bio-wrap {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 520px);
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .hero__bio {
-  margin-top: 60px;
+  width: 100%;
   font-size: 17px;
   line-height: 1.7;
   color: #e1e8f0; 
-  max-width: 520px;
-  margin-bottom: 40px;
+  font-weight: 500;
 }
 
 .hero__actions {
@@ -72,20 +80,17 @@
 
 .blob {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
   opacity: 0.18;
   pointer-events: none;
-  left: 200px;
-  background-color: var(--accent-light);
+  background: radial-gradient(ellipse, var(--accent-light), transparent 70%);
 }
 
 @media (max-width: 996px) {
   .hero {
     grid-template-columns: 1fr;
-  }
-  .blob {
-    top: 100px;
   }
   .hero-image {
     padding: 20px 0;
