@@ -19,6 +19,7 @@
 
 .entry__year {
   display: block;
+  text-align: left;
   font-family: 'DM Mono', monospace;
   font-size: 12px;
   color: #555;
@@ -36,6 +37,11 @@
   line-height: 1;
   margin: 0 0 12px;
   animation: fadeUp 0.8s ease 0.5s both;
+}
+
+.entry__instruction {
+  text-align: right;
+  font-family: 'DM Mono', monospace;
 }
 
 .entry__space-hint {

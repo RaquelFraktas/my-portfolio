@@ -19,11 +19,11 @@ export default function EntryPage({ onEnter }) {
     <>
     <div className="entry">
       <div className="entry__content">
-        <span className="entry__year">© {new Date().getFullYear()} — stuff</span>
+        <span className="entry__year">{new Date().getFullYear()} ©</span>
         <h1 className="entry__name">
           RAQUEL.WORLD
         </h1>
-          click the image to enter
+          <div className="entry__instruction">click the image to enter</div>
       </div>
       {showSpaceHint && (
         <svg className="entry__space-hint" viewBox="0 0 400 120" aria-hidden="true">
