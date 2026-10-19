@@ -42,7 +42,7 @@ void main(){
   vec3 skyTop = mix(vec3(.02,.02,.08),vec3(.05,.2,.6),smoothstep(0.,.5,u_tod));
   skyTop = mix(skyTop,vec3(.35,.6,.85),smoothstep(.4,.7,u_tod));
   skyTop = mix(skyTop,vec3(.05,.1,.4),smoothstep(.85,1.,u_tod));
-  vec3 skyBot = mix(vec3(.02,.02,.1),vec3(.65,.35,.15),smoothstep(.2,.55,u_tod));
+  vec3 skyBot = mix(vec3(.02,.02,.1),vec3(.08,.12,.24),smoothstep(.2,.55,u_tod));
   skyBot = mix(skyBot,vec3(.55,.75,.95),smoothstep(.5,.75,u_tod));
   skyBot = mix(skyBot,vec3(.07,.15,.5),smoothstep(.85,1.,u_tod));
   vec3 sky = mix(skyBot,skyTop,pow(uv.y,.5));
@@ -51,7 +51,7 @@ void main(){
   vec3 cloudShadow = mix(vec3(.1,.1,.15),vec3(.65,.68,.75),sunLight);
   float depth = fbm(uv*3.+r*2.+t*0.08);
   vec3 cloudColor = mix(cloudShadow,cloudLight,smoothstep(.3,.8,depth));
-  gl_FragColor = vec4(mix(sky,cloudColor,cloud),1.);
+  gl_FragColor = vec4(mix(sky,cloudColor,cloud)*.70,1.);
 }
 `;
 
