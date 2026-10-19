@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import SiteNav from "../components/SiteNav";
 import "./TypeaheadPage.css";
 
 const TRENDING_QUERIES = [

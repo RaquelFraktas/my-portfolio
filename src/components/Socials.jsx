@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const socials = [
   { label: "GitHub", icon: "ti-brand-github", href: "https://github.com/RaquelFraktas" },
   { label: "LinkedIn", icon: "ti-brand-linkedin", href: "https://www.linkedin.com/in/raquelfraktas/" },

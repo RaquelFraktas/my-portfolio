@@ -5,13 +5,6 @@ import Hero from "./Hero";
 import Skills from "./Skills";
 import Socials from "../components/Socials";
 import SiteNav from "../components/SiteNav";
-import "../neumorphic.css";
-
-const socials = [
-  { label: "GitHub", icon: "ti-brand-github", href: "#" },
-  { label: "LinkedIn", icon: "ti-brand-linkedin", href: "#" },
-  { label: "Email", icon: "ti-mail", href: "mailto:raquel@example.com" },
-];
 
 export default function PersonalSite() {
   const [activeSection, setActiveSection] = useState("home");
