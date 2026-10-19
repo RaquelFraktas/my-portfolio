@@ -1,17 +1,10 @@
 
 const color = "#be6affdd";
-const skills = [
-  { name: "TypeScript", color: color },
-  { name: "React", color: color },
-  { name: "Ruby on Rails", color: color },
-  { name: "Python", color: color },
-  { name: "Javascript", color: color },
-  { name: "Datadog", color: color },
-  { name: "PostgreSQL", color: color },
-  { name: "Docker", color: color },
-  { name: "AWS", color: color },
-  { name: "Cloudflare", color: color },
-  { name: "Redis", color: color },
+// keep each group to 4 items max so it fits on one line
+const skillGroups = [
+  { skills: ["TypeScript", "JavaScript", "React"] },
+  { skills: ["Ruby on Rails", "Python", "PostgreSQL", "Redis"] },
+  { skills: ["AWS", "Docker", "Cloudflare", "Datadog"] },
 ];
 
 export default function Skills() {
@@ -20,11 +13,17 @@ export default function Skills() {
       <div className="section__header">
         <span className="section__label">// tools</span>
       </div>
-      <div className="skills-grid">
-        {skills.map((s) => (
-          <div key={s.name} className="skill-pill">
-            <span className="dot" style={{ background: s.color }} />
-            {s.name}
+      <div className="skills-groups">
+        {skillGroups.map((group) => (
+          <div key={group.title} className="skills-group">
+            <div className="skills-grid">
+              {group.skills.map((name) => (
+                <div key={name} className="skill-pill">
+                  <span className="dot" style={{ background: color }} />
+                  {name}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
