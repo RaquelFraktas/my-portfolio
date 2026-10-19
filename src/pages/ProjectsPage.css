@@ -56,10 +56,11 @@
 
 .projects-page__title {
   margin-top: 8px;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   letter-spacing: -0.04em;
   font-weight: 800;
   color: var(--text);
+
 }
 
 .project-feature {
@@ -106,7 +107,7 @@
   max-width: 760px;
   line-height: 1.7;
   color: var(--text);
-  text-align: center;
+  text-align: left;
 }
 
 .project-feature__thumb-link {
@@ -177,16 +178,16 @@
   }
 }
 
+/* same width as the description so both share a right edge */
 .project-tech {
   margin: 0;
+  width: 100%;
+  max-width: 760px;
   font-size: 0.7rem;
+  line-height: 1.35;
   display: flex;
   flex-direction: column;
-  padding: 8px 0;
-}
-.stack-title {
-  text-align: start;
-}
-.stack-items {
-  text-align: start;
+  gap: 2px;
+  text-align: left;
+  margin-bottom: 14px;
 }

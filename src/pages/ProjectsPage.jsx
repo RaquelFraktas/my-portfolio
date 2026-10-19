@@ -13,8 +13,7 @@ export default function ProjectsPage() {
       <div className="projects-page__inner">
         <header className="projects-page__header">
           <div>
-            <p className="section__label">// selected work</p>
-            <h1 className="projects-page__title">Projects</h1>
+            <h2 className="projects-page__title">Projects</h2>
           </div>
         </header>
 
