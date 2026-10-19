@@ -1,7 +1,7 @@
 .typeahead-page {
   min-height: 100vh;
   padding: 120px 24px 80px;
-  background: #e0e5ec;
+  background: var(--surface);
   color: var(--text);
   font-family: var(--sans);
 }
@@ -12,7 +12,7 @@
 }
 
 .typeahead-page__label {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--mono);
   font-size: 13px;
   margin-bottom: 10px;
 }
@@ -26,9 +26,9 @@
 }
 
 .typeahead-page__panel {
-  background: #e0e5ec;
+  background: var(--surface);
   border-radius: 24px;
-  box-shadow: 10px 10px 22px #b8bec7, -10px -10px 22px #ffffff;
+  box-shadow: var(--raised-xl);
   padding: 28px;
   margin-top: 32px;
 }
@@ -45,13 +45,13 @@
   gap: 12px;
   padding: 14px 18px;
   border-radius: 18px;
-  background: #e0e5ec;
-  box-shadow: inset 5px 5px 12px #b8bec7, inset -5px -5px 12px #ffffff;
+  background: var(--surface);
+  box-shadow: inset 5px 5px 12px var(--shadow-dark), inset -5px -5px 12px var(--shadow-light);
   transition: box-shadow 0.15s ease;
 }
 
 .typeahead-search:focus-within {
-  box-shadow: inset 7px 7px 16px #b8bec7, inset -7px -7px 16px #ffffff;
+  box-shadow: inset 7px 7px 16px var(--shadow-dark), inset -7px -7px 16px var(--shadow-light);
 }
 
 .typeahead-search__icon {
@@ -73,20 +73,17 @@
 }
 
 .typeahead-search__button {
-  border: none;
-  background: #e0e5ec;
-  color: #5a6a7e;
+  color: var(--ink);
   border-radius: 12px;
   padding: 10px 16px;
   font-weight: 700;
-  cursor: pointer;
-  box-shadow: 5px 5px 12px #b8bec7, -5px -5px 12px #ffffff;
+  box-shadow: var(--raised);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .typeahead-search__button:hover {
   transform: translateY(-1px);
-  box-shadow: 7px 7px 16px #b8bec7, -7px -7px 16px #ffffff;
+  box-shadow: var(--raised-lg);
 }
 
 .typeahead-list {
@@ -117,7 +114,7 @@
 .typeahead-item:hover,
 .typeahead-item.is-active {
   transform: translateY(-1px);
-  box-shadow: 5px 5px 12px #b8bec7, -5px -5px 12px #ffffff;
+  box-shadow: var(--raised);
 }
 
 .typeahead-item__text {
