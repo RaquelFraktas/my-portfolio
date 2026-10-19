@@ -43,7 +43,7 @@ export default function PersonalSite() {
       <Socials />
 
       <footer className="site-footer">
-        built with <span className="site-footer__heart">♥</span> by raquel fraktas · {new Date().getFullYear()}
+        raquel fraktas · {new Date().getFullYear()}
       </footer>
     </div>
   );

@@ -28,28 +28,23 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
-  color: #423552; 
+  color: #e1e8f0; 
 }
 
 .hero__role {
   font-size: clamp(20px, 4vw, 32px);
   font-weight: 700;
-  color: #555;
   margin-bottom: 0;
   min-height: 1.4em;
   font-family: 'DM Mono', monospace;
   position: relative;
-}
-
-.hero__role-text {
-  color: var(--text);
+  color: rgba(192, 132, 252, 0.991)
 }
 
 .hero__bio-wrap {
   position: relative;
   isolation: isolate;
   width: min(100%, 520px);
-  margin-top: 60px;
   margin-bottom: 40px;
 }
 
@@ -59,6 +54,7 @@
   line-height: 1.7;
   color: #e1e8f0; 
   font-weight: 500;
+  font-family: var(--sans);
 }
 
 .hero__actions {
