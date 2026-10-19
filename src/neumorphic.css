@@ -5,7 +5,7 @@
 .nm {
   background: #e0e5ec;
   color: #5a6a7e;
-  font-family: system-ui, sans-serif;
+  font-family: var(--sans);
 }
 
 /* ── Surface variants ───────────────────────────────────────────────────────── */
@@ -31,7 +31,7 @@
   border-radius: 12px;
   font-size: 14px;
   font-weight: 600;
-  color: #5a6a7e;
+  color: var(--text);
   padding: 12px 24px;
   box-shadow: 5px 5px 12px #b8bec7, -5px -5px 12px #ffffff;
   transition: box-shadow 0.15s, transform 0.1s;
@@ -43,7 +43,7 @@
   box-shadow: inset 3px 3px 8px #b8bec7, inset -3px -3px 8px #ffffff;
   transform: scale(0.98);
 }
-.nm-btn--accent { color: #5b8dee; }
+.nm-btn--accent { color: var(--accent); }
 
 .nm-icon-btn {
   width: 44px;
