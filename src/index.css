@@ -64,6 +64,13 @@ body {
   margin: 0;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
 .site-nav {
   position: sticky;
   top: 0;
@@ -81,6 +88,7 @@ body {
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.02em;
+  color: var(--text);;
 }
 
 .site-nav__links {
@@ -96,7 +104,7 @@ body {
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-  color: #5a6a7e;
+  color: var(--text);
   padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
   box-shadow: var(--nav-shadow);
   transition: box-shadow 0.35s ease, transform 0.35s ease;

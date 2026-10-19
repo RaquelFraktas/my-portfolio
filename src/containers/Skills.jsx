@@ -18,8 +18,7 @@ export default function Skills() {
   return (
     <section id="skills">
       <div className="section__header">
-        <span className="section__label section__label">// tools</span>
-        <h2 className="section__heading">My stack</h2>
+        <span className="section__label">// tools</span>
       </div>
       <div className="skills-grid">
         {skills.map((s) => (

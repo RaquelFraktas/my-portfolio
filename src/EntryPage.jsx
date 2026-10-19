@@ -19,7 +19,7 @@ export default function EntryPage({ onEnter }) {
     <>
     <div className="entry">
       <div className="entry__content">
-        <span className="entry__year">{new Date().getFullYear()} ©</span>
+        <span className="entry__year">{new Date().getFullYear()}©</span>
         <h1 className="entry__name">
           RAQUEL.WORLD
         </h1>

@@ -27,11 +27,14 @@ html {
 .site-wrapper {
   background: #e0e5ec;
   color: #5a6a7e;
-  font-family: system-ui, sans-serif;
+  font-family: var(--sans);
   width: 100%;
 }
 
 /* SECTIONS */
+.section__header {
+  margin-top: 20px;
+}
 
 .section__label {
   font-family: 'DM Mono', monospace;
@@ -51,15 +54,14 @@ html {
   cursor: pointer;
   border: none;
   background: #e0e5ec;
-  cursor: pointer;
   color: #5a6a7e;
   padding: 12px 24px;
-  box-shadow: 4px 4px 10px #b8bec7, -4px -4px 10px #ffffff;
+  box-shadow: 4px 4px 10px #b8bec7, -4px -4px 10px #fff;
   transition: box-shadow 0.15s, transform 0.1s;
 }
 
 .cta-btn:hover {
-  box-shadow: 7px 7px 16px #b8bec7, -7px -7px 16px #ffffff;
+  box-shadow: 2px 2px 2px #b8bec7,-2px -2px 10px #fff;
 }
 
 /* PROJECT CARDS */
@@ -115,124 +117,15 @@ html {
   font-family: 'DM Mono', monospace;
 }
 
-/* PRODUCT CAROUSEL */
-.project-carousel {
-  padding: 80px 24px;
-}
-
-.project-carousel__shell {
-  display: grid;
-  grid-template-columns: 52px minmax(0, 1fr) 52px;
-  align-items: center;
-  gap: 18px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.project-carousel__viewport {
-  overflow: hidden;
-  border-radius: 28px;
-  background: #e0e5ec;
-  box-shadow: inset 6px 6px 14px #b8bec7, inset -6px -6px 14px #ffffff;
-}
-
-.project-carousel__track {
-  display: flex;
-  transition: transform 0.45s ease;
-}
-
-.project-card {
-  min-width: 100%;
-  padding: 36px 28px;
-  background: #e0e5ec;
-  box-shadow: 10px 10px 22px #b8bec7, -10px -10px 22px #ffffff;
-  border-radius: 28px;
-  display: grid;
-  gap: 20px;
-}
-
-.project-card__body {
-  display: grid;
-  gap: 10px;
-}
-
-.project-card__title {
-  font-size: clamp(20px, 3vw, 34px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #5a6a7e;
-}
-
-.project-card__description {
-  color: #6f7f92;
-  line-height: 1.6;
-  max-width: 54ch;
-}
-
-
-.project-card__pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
-  color: #5a6a7e;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  box-shadow: inset 2px 2px 5px #b8bec7, inset -2px -2px 5px #ffffff;
-}
-
-.project-carousel__nav {
-  width: 52px;
-  height: 52px;
-  border: none;
-  border-radius: 16px;
-  background: #e0e5ec;
-  color: #5a6a7e;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 6px 6px 14px #b8bec7, -6px -6px 14px #ffffff;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.project-carousel__nav:hover {
-  transform: translateY(-1px);
-  box-shadow: inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff;
-}
-
-.project-carousel__dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.project-carousel__dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(90, 106, 126, 0.2);
-  cursor: pointer;
-  box-shadow: inset 2px 2px 5px #b8bec7, inset -2px -2px 5px #ffffff;
-  transition: all 0.15s ease;
-}
-
-.project-carousel__dot.is-active {
-  background: #4ECDC4;
-  box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.2);
-}
-
 /* SKILLS */
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .skill-pill {
@@ -335,7 +228,6 @@ textarea {
   color: #5a6a7e;
   box-shadow: 5px 5px 12px #b8bec7, -5px -5px 12px #ffffff;
   transition: box-shadow 0.15s, transform 0.1s;
-  font-family: 'Syne', sans-serif;
 }
 
 .social-btn:hover {
@@ -348,7 +240,6 @@ textarea {
   padding: 24px;
   font-size: 13px;
   color: #aaa;
-  font-family: 'DM Mono', monospace;
 }
 
 .site-footer__heart {
