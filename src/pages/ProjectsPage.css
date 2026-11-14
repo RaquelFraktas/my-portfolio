@@ -62,8 +62,9 @@
   box-shadow: var(--raised-xl);
 }
 
-.project-feature--typeahead {
-  grid-template-columns: 1fr;
+.project-feature--typeahead,
+.project-feature--extensions {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .project-feature--typeahead .project-feature__copy,
@@ -151,7 +152,7 @@
 
 @media (max-width: 760px) {
   .project-feature {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .project-feature__thumb-link {
@@ -165,11 +166,108 @@
   margin: 0;
   width: 100%;
   max-width: 760px;
-  font-size: 0.7rem;
   line-height: 1.35;
   display: flex;
   flex-direction: column;
   gap: 2px;
   text-align: left;
   margin-bottom: 14px;
+}
+/* CHROME EXTENSIONS: inset tiles stacked in one narrow column so each reads tall, not wide */
+.extension-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.extension-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 22px 20px;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--inset);
+  text-align: left;
+}
+
+/* desktop: name left, badge in the right-hand corner. phones: badge stacks above the name */
+.extension-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .extension-item__header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.extension-item__badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  box-shadow: var(--raised-sm);
+}
+
+.extension-item__name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* collapsed to ~4 lines; the inline max-height from the component takes over when expanded */
+.extension-item__description {
+  line-height: 1.6;
+  color: var(--text);
+  max-height: 5.0em;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.extension-item__description.is-clamped {
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
+.extension-item__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: var(--nav-radius);
+  background: var(--surface);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--raised-sm);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.extension-item__toggle:hover,
+.extension-item__toggle:focus-visible {
+  box-shadow: var(--inset-sm);
+  transform: scale(0.98);
 }

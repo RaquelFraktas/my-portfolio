@@ -1,9 +1,10 @@
 import SiteNav from "../components/SiteNav";
+import MysteryGameProject from "../containers/MysteryGameProject";
 import MatrixProject from "../containers/MatrixProject";
 import NoSignalProject from "../containers/NoSignalProject";
 import HorsesandDivorcesProject from "../containers/HorsesandDivorcesProject";
 import "./ProjectsPage.css";
-import TypeaheadPage from "./TypeaheadPage";
+import ChromeExtensions from "../containers/ChromeExtensions";
 
 export default function ProjectsPage() {
   return (
@@ -18,10 +19,11 @@ export default function ProjectsPage() {
         </header>
 
         <div className="projects-page__stack">
+          <MysteryGameProject/>
           <MatrixProject/>
           <NoSignalProject/>
           <HorsesandDivorcesProject/>
-          <TypeaheadPage/>
+          <ChromeExtensions/>
         </div>
       </div>
     </main>

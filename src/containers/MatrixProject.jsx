@@ -4,7 +4,7 @@ export default function MatrixProject() {
   return (
     <section className="project-feature project-feature--game">
       <div className="project-feature__copy">
-        <p className="section__label">Game</p>
+        <p className="section__label">Game for a Client</p>
         <h2 className="project-feature__title">Down the Rabbit Hole</h2>
         <p className="project-feature__description">
           A Matrix-inspired game of tag built with Ruby on Rails, Hotwire/Stimulus and Turbo. 
