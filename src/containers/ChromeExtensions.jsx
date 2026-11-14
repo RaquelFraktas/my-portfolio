@@ -21,7 +21,7 @@ export default function ChromeExtensions() {
         <p className="section__label">Browser tools</p>
         <h2 className="project-feature__title">Chrome Extensions</h2>
         <p className="project-feature__description">
-          Extensions I've built for Chrome. (Please bear with me on the styling. WIP)
+          Extensions I've built for Chrome.
         </p>
       </div>
 
