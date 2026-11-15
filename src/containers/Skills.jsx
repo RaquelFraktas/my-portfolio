@@ -5,6 +5,7 @@ const skillGroups = [
   { skills: ["TypeScript", "JavaScript", "React"] },
   { skills: ["Ruby on Rails", "Python", "PostgreSQL", "Redis"] },
   { skills: ["AWS", "Docker", "Cloudflare", "Datadog"] },
+    { skills: ["Heroku", "Vercel", "Jev AI"] },
 ];
 
 export default function Skills() {
@@ -30,7 +31,7 @@ export default function Skills() {
       <div className="stats-grid">
         {[
           { num: "4+", label: "Years experience", color: color },
-          { num: "30+", label: "Projects shipped", color: color },
+          // { num: "30", label: "Projects shipped", color: color },
           { num: "∞", label: "Bugs fixed", color: color },
         ].map((s) => (
           <div key={s.label} className="stat-card">
