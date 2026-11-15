@@ -161,14 +161,13 @@
   }
 }
 
-/* VIEW TOGGLE: inset track, the selected layout pops out raised */
+/* VIEW TOGGLE: options sit raised, the selected layout is pressed in (same as the nav) */
 .view-toggle {
   display: inline-flex;
   gap: 4px;
   padding: 5px;
   border-radius: var(--nav-radius);
   background: var(--surface);
-  box-shadow: var(--inset-sm);
 }
 
 .view-toggle__btn {
@@ -183,6 +182,7 @@
   color: var(--ink-muted);
   font-size: 18px;
   cursor: pointer;
+  box-shadow: var(--raised-sm);
   transition: box-shadow 0.25s ease, color 0.25s ease;
 }
 
@@ -193,7 +193,7 @@
 
 .view-toggle__btn.is-active {
   color: var(--ink);
-  box-shadow: var(--raised-sm);
+  box-shadow: var(--inset-sm);
 }
 
 /* GRID VIEW: three compact cards per row */
