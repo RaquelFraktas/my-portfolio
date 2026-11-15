@@ -4,12 +4,10 @@ import { useEffect, useId, useRef, useState } from "react";
 const chromeExtensions = [
   {
     name: "Italian Subtitles Injector",
-    type: "Chrome extension",
     description: "A Chrome extension that finds Italian subtitles on OpenSubtitles and adds them to the video you're watching, on any site with an HTML5 <video> player. I had a boyfriend where English wasn't his first language, and I wanted to watch movies with him, so I built this extension to make it easier to find Italian subtitles for any movie.",
   },
   {
     name: "YouTube Ads Skipper",
-    type: "Chrome extension",
     description: "Don't like spending money on subscriptions? This extension skips YouTube ads for you.",
   },
 ];
