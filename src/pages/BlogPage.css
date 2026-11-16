@@ -113,7 +113,7 @@
 .markdown {
   line-height: 1.7;
   font-size: 1.25rem;
-  /* color: var(--ink); */
+  text-align: left;
   color:black;
   overflow-wrap: anywhere;
 }
