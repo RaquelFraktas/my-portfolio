@@ -34,7 +34,6 @@ export default function AdminLayout() {
       <header className="admin__bar">
         <span className="admin__muted">signed in as {me.username}</span>
         <div className="admin__actions">
-          <Link to="/blog" className="nav-link">view blog</Link>
           <button type="button" className="nav-link" onClick={signOut}>sign out</button>
         </div>
       </header>
