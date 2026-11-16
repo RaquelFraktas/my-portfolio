@@ -35,6 +35,7 @@ export const api = {
   me: () => request("/admin/me"),
   adminListPosts: () => request("/admin/posts"),
   adminGetPost: (id) => request(`/admin/posts/${id}`),
+  adminPostIdBySlug: (slug) => request(`/admin/posts/by-slug/${encodeURIComponent(slug)}`),
   createPost: (post) => request("/admin/posts", { method: "POST", body: post }),
   updatePost: (id, post) => request(`/admin/posts/${id}`, { method: "PUT", body: post }),
   deletePost: (id) => request(`/admin/posts/${id}`, { method: "DELETE" }),

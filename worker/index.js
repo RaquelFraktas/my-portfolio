@@ -84,6 +84,16 @@ admin.get("/posts", async (c) => {
   return c.json({ posts });
 });
 
+// Lets the public post page show an "edit" link to a signed-in admin.
+admin.get("/posts/by-slug/:slug", async (c) => {
+  const slug = c.req.param("slug");
+  if (!isValidSlug(slug)) return c.json({ error: "not found" }, 404);
+  const sql = c.get("sql")();
+  const [post] = await sql`select id from posts where slug = ${slug}`;
+  if (!post) return c.json({ error: "not found" }, 404);
+  return c.json({ id: post.id });
+});
+
 admin.get("/posts/:id", async (c) => {
   const id = parseId(c.req.param("id"));
   if (!id) return c.json({ error: "not found" }, 404);

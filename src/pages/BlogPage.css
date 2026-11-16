@@ -98,6 +98,12 @@
   margin-bottom: 24px;
 }
 
+/* admin-only edit link under the post */
+.blog-post__footer {
+  display: flex;
+  margin-top: 48px;
+}
+
 .blog-post__header {
   margin: 24px 0 32px;
 }

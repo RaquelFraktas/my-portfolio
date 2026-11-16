@@ -27,6 +27,21 @@ export default function BlogPostPage() {
     };
   }, [slug]);
 
+  // Signed-in admins get an edit link; for everyone else this request is
+  // rejected (401) and nothing shows.
+  const [edit, setEdit] = useState({ slug: null, id: null });
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .adminPostIdBySlug(slug)
+      .then(({ id }) => !cancelled && setEdit({ slug, id }))
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+  const editId = edit.slug === slug ? edit.id : null;
+
   const loading = state.slug !== slug;
   const { post, error } = state;
 
@@ -54,6 +69,11 @@ export default function BlogPostPage() {
               </time>
             </header>
             <Markdown>{post.body}</Markdown>
+            {editId && (
+              <footer className="blog-post__footer">
+                <Link to={`/admin/posts/${editId}`} className="nav-link">Edit post</Link>
+              </footer>
+            )}
           </>
         )}
       </article>
