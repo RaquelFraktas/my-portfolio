@@ -112,8 +112,9 @@
 
 .markdown {
   line-height: 1.7;
-  font-size: 1.05rem;
-  color: var(--text);
+  font-size: 1.25rem;
+  /* color: var(--ink); */
+  color:black;
   overflow-wrap: anywhere;
 }
 
