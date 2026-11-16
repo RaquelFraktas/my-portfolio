@@ -94,7 +94,6 @@
   margin: 0;
   max-width: 760px;
   line-height: 1.7;
-  color: var(--ink);
   text-align: left;
 }
 
@@ -300,7 +299,6 @@
   width: 100%;
   max-width: 760px;
   line-height: 1.35;
-  color: var(--ink);
   display: flex;
   flex-direction: column;
   gap: 2px;
