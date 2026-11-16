@@ -20,7 +20,7 @@
 }
 
 .blog-page__inner {
-  max-width: 760px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-top: 92px;
 }
@@ -80,7 +80,7 @@
 .blog-card__title {
   margin: 6px 0 0;
   font-size: 1.35rem;
-  color: var(--text-h);
+  color: var(--text);
 }
 
 .blog-card__summary {
@@ -88,16 +88,14 @@
   color: var(--ink);
 }
 
+/* raised .nav-link button (shape, shadow and hover come from index.css) */
 .blog-post__back {
-  display: inline-block;
+  /* block-level so it sits on the column's left edge instead of following #root's text-align: center */
+  display: flex;
+  width: fit-content;
   margin-top: 8px;
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.blog-post__back:hover {
-  color: var(--accent);
+  padding: 8px 16px;
+  margin-bottom: 24px;
 }
 
 .blog-post__header {

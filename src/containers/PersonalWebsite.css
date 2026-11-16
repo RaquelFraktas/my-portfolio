@@ -164,7 +164,7 @@ textarea {
   border-radius: 24px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--text);
   box-shadow: var(--raised);
   transition: box-shadow 0.15s, transform 0.1s;
 }

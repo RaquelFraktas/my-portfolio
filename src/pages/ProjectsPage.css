@@ -94,7 +94,7 @@
   margin: 0;
   max-width: 760px;
   line-height: 1.7;
-  color: var(--text);
+  color: var(--ink);
   text-align: left;
 }
 
@@ -300,6 +300,7 @@
   width: 100%;
   max-width: 760px;
   line-height: 1.35;
+  color: var(--ink);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -371,7 +372,7 @@
 /* collapsed to ~4 lines; the inline max-height from the component takes over when expanded */
 .extension-item__description {
   line-height: 1.6;
-  color: var(--text);
+  color: var(--ink);
   max-height: 5.0em;
   overflow: hidden;
   transition: max-height 0.35s ease;
@@ -393,7 +394,7 @@
   font-family: inherit;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--text);
   cursor: pointer;
   box-shadow: var(--raised-sm);
   transition: box-shadow 0.35s ease, transform 0.35s ease;

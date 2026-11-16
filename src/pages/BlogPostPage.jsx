@@ -41,7 +41,7 @@ export default function BlogPostPage() {
     <main className="blog-page">
       <SiteNav activeSection="blog" className="blog-page__nav" />
       <article className="blog-page__inner blog-post">
-        <Link to="/blog" className="blog-post__back">← all posts</Link>
+        <Link to="/blog" className="nav-link blog-post__back">← All Posts</Link>
 
         {loading && <p className="blog-page__status">Loading…</p>}
         {!loading && error && <p className="blog-page__status">{error}</p>}
