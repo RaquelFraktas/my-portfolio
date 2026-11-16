@@ -1,0 +1,164 @@
+/* Admin reuses the blog page shell (BlogPage.css), the site nav and the shared
+   .nav-link button. Only admin-specific pieces live here. */
+
+.admin {
+  text-align: left;
+}
+
+.admin__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.admin__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.admin__row .blog-page__title {
+  margin: 0;
+}
+
+.admin__muted {
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.admin__error {
+  color: #c0392b;
+}
+
+.admin__ok {
+  color: #2e8b57;
+}
+
+/* post list: blog cards with the status, title and date on one line */
+.admin__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin__item .blog-card__title {
+  flex: 1;
+  color: var(--ink);
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin__badge {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 8px;
+  color: var(--ink-muted);
+  box-shadow: var(--inset-sm);
+}
+
+.admin__badge--published {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* editor */
+.admin__editor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin__back {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.admin__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.admin__field input,
+.admin__field textarea {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: var(--nav-radius);
+  color: var(--ink);
+  box-shadow: var(--inset);
+}
+
+.admin__field input:focus-visible,
+.admin__field textarea:focus-visible {
+  outline: 2px solid var(--ink-muted);
+}
+
+.admin__body {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.admin__tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin__preview {
+  min-height: 300px;
+  padding: 8px 20px;
+  border-radius: var(--nav-radius);
+  box-shadow: var(--inset);
+  font-weight: 400;
+}
+
+.admin__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin__actions .nav-link:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.admin__delete {
+  margin-left: auto;
+  color: #c0392b;
+}
+
+/* login: one raised card centred in the page */
+.admin__login {
+  max-width: 380px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px 28px;
+  border-radius: 24px;
+  box-shadow: var(--raised-lg);
+}
+
+.admin__login .blog-page__title {
+  margin: 0;
+}
