@@ -1,0 +1,62 @@
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import SiteNav from "../components/SiteNav";
+import Markdown from "../components/Markdown";
+import { api, formatDate } from "../lib/api";
+import "./BlogPage.css";
+
+export default function BlogPostPage() {
+  const { slug } = useParams();
+  const [state, setState] = useState({ slug: null, post: null, error: null });
+
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .getPost(slug)
+      .then((data) => !cancelled && setState({ slug, post: data.post, error: null }))
+      .catch((err) =>
+        !cancelled &&
+        setState({
+          slug,
+          post: null,
+          error: err.status === 404 ? "That post doesn't exist." : "Couldn't load this post right now.",
+        }),
+      );
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+
+  const loading = state.slug !== slug;
+  const { post, error } = state;
+
+  useEffect(() => {
+    if (post && !loading) document.title = `${post.title} · raquel.world`;
+    return () => {
+      document.title = "raquel.world";
+    };
+  }, [post, loading]);
+
+  return (
+    <main className="blog-page">
+      <SiteNav activeSection="blog" className="blog-page__nav" />
+      <article className="blog-page__inner blog-post">
+        <Link to="/blog" className="blog-post__back">← all posts</Link>
+
+        {loading && <p className="blog-page__status">Loading…</p>}
+        {!loading && error && <p className="blog-page__status">{error}</p>}
+        {!loading && post && (
+          <>
+            <header className="blog-post__header">
+              <h1 className="blog-post__title">{post.title}</h1>
+              <time className="blog-card__date" dateTime={post.published_at}>
+                {formatDate(post.published_at)}
+              </time>
+            </header>
+            <Markdown>{post.body}</Markdown>
+          </>
+        )}
+      </article>
+    </main>
+  );
+}

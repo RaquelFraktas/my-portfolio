@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function SiteNav({ activeSection = "home", className = "" }) {
   const navigate = useNavigate();
-  const navItems = ["home", "projects"];
+  const navItems = ["home", "projects", "blog"];
 
   function handleNavigate(section) {
-    if (section === "projects") {
-      navigate("/projects");
+    if (section === "projects" || section === "blog") {
+      navigate(`/${section}`);
       return;
     }
 
