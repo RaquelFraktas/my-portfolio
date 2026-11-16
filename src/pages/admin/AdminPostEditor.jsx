@@ -138,7 +138,7 @@ function Editor({ id }) {
               {t}
             </button>
           ))}
-          <small className="admin__muted">markdown</small>
+          <small className="admin__muted">markdown + html</small>
         </div>
         {tab === "write" ? (
           <textarea
