@@ -142,15 +142,18 @@
 }
 
 .markdown pre {
-  padding: 16px;
-  border-radius: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
   background: var(--code-bg);
   overflow-x: auto;
+  line-height: 1.4;
+  max-width: 640px;
+  margin-inline: auto;
 }
 
 .markdown code {
   font-family: var(--mono);
-  font-size: 0.9em;
+  font-size: 0.65em;
 }
 
 .markdown :not(pre) > code {
