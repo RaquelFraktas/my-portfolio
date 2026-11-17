@@ -370,7 +370,6 @@
 /* collapsed to ~4 lines; the inline max-height from the component takes over when expanded */
 .extension-item__description {
   line-height: 1.6;
-  color: var(--ink);
   max-height: 5.0em;
   overflow: hidden;
   transition: max-height 0.35s ease;
