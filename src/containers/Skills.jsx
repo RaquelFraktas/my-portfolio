@@ -2,10 +2,11 @@
 const color = "#be6affdd";
 // keep each group to 4 items max so it fits on one line
 const skillGroups = [
-  { skills: ["TypeScript", "JavaScript", "React"] },
-  { skills: ["Ruby on Rails", "Python", "PostgreSQL", "Redis"] },
+  { skills: ["JavaScript", "React", "Ruby on Rails"] },
+  { skills: ["Typescript", "Python", "PostgreSQL", "Redis"] },
   { skills: ["AWS", "Docker", "Cloudflare", "Datadog"] },
-    { skills: ["Heroku", "Vercel", "Jev AI"] },
+  { skills: ["Heroku", "Vercel", "Jev AI"] },
+  { skills: ["Node", "Digital Ocean", "Sanity"] },
 ];
 
 export default function Skills() {
