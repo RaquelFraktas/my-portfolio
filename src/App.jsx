@@ -12,8 +12,10 @@ import AdminPostEditor from "./pages/admin/AdminPostEditor";
 
 export default function App() {
   const { pathname } = useLocation();
-  // the admin area skips the intro screen
-  const [entered, setEntered] = useState(() => pathname.startsWith("/admin"));
+  // The intro screen only greets visitors who land on the homepage. Deep links
+  // (/projects, /blog/..., /admin) go straight to their page. This is decided
+  // once on first load, so navigating back to "/" later doesn't show it again.
+  const [entered, setEntered] = useState(() => pathname !== "/");
   const [exiting, setExiting] = useState(false);
   const entryRef = useRef(null);
   const hasEnteredRef = useRef(false);
